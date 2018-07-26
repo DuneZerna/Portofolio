@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="application-name" content="The Works of Dune Zerna">
+    <meta name="author" content="Dune E. Zerna">
+    <meta name="description" content="Portofolio by Dune Zerna">
+    <meta name="keywords" content="Portofolio HTML CSS JavaScript C++ Code Programming">
+
+    <title>The Works of Dune Zerna</title>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="js/respond.js"></script>
+
+</head>
+
+<body>
+    <header>Portofolio
+        <div class="headerbtn">
+            <img src="img/menu.png" alt="Menu" style="width: 100%" onmouseover="menuFocus(20, 20)">
+        </div>
+    </header>
+
+    <div class="alpha column"></div>
+
+    <div class="beta column">Second Fragment</div>
+
+    <div class="gamma column">Third Fragment</div>
+
+    <footer>Footer</footer>
+
+
+</body>
+
+<script>
+    $(document).ready(function() {
+        
+        
+    });
+
+    function menuFocus(time, interval) {
+        var timer = window.setInterval(function() {
+            $("img").css("opacity", "0.1");
+            window.setTimeout(function() {
+                $("img").css("opacity", "1");
+            }, 100);
+        }, interval);
+        window.setTimeout(function() {
+            clearInterval(timer);
+        }, time);
+    }
+</script>
+
+</html>

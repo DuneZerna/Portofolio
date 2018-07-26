@@ -1,0 +1,30 @@
+@media only screen and (max-width: 480px) {
+    header {
+        position: sticky;
+        top:0;
+        text-align: center;
+        font-size: 300%;
+        background-color: black;
+        color: white;
+    }
+
+    .headerbtn {
+        position: static;
+        width: 10%;
+        float: left;
+        margin: 1% 0 0 5%;
+    }
+
+    button span {
+        display: none;
+    }
+
+    .alpha {
+        box-sizing: content-box;
+        height: 2000em;
+        background-color: yellow;
+        background-image: url(http://via.placeholder.com/480x290);
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024) {}
