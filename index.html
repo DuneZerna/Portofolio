@@ -13,45 +13,61 @@
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
     <script src="js/respond.js"></script>
+
 
 </head>
 
 <body>
-    <header>Portofolio
-        <div class="headerbtn">
-            <img src="img/menu.png" alt="Menu" style="width: 100%" onmouseover="menuFocus(20, 20)">
+    <div class="mobile">
+        <header>Portofolio
+            <div class="headerbtn">
+                <img src="img/menu.png" alt="Menu" style="width: 100%">
+            </div>
+        </header>
+
+        <div class="alpha column"></div>
+
+        <div class="beta column">Second Fragment</div>
+
+        <div class="gamma column">Third Fragment</div>
+
+        <footer>Footer</footer>
+
+    </div>
+
+    <div class="reveal">
+        <div class="slides">
+            <header>Portofolio by Dune Zerna</header>
+            <button>This is a button</button>
+            <section>
+                <section>Unicorners</section>
+                <section></section>
+            </section>
+            <section>Sportscaféen</section>
         </div>
-    </header>
+    </div>
+    <script src="js/reveal.js"></script>
+    <script src="js/marked.js"></script>
+    <script src="js/markdown.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
 
-    <div class="alpha column"></div>
+    <script>
+        $(document).ready(function() {
 
-    <div class="beta column">Second Fragment</div>
-
-    <div class="gamma column">Third Fragment</div>
-
-    <footer>Footer</footer>
-
-
+            if (document.documentElement.clientWidth <= 480) {
+                $(".reveal").hide();
+            } else if (document.documentElement.clientWidth > 480) {
+                $(".mobile").hide();
+                $(".reveal").show();
+            }
+        });
+    </script>
 </body>
 
-<script>
-    $(document).ready(function() {
-        
-        
-    });
-
-    function menuFocus(time, interval) {
-        var timer = window.setInterval(function() {
-            $("img").css("opacity", "0.1");
-            window.setTimeout(function() {
-                $("img").css("opacity", "1");
-            }, 100);
-        }, interval);
-        window.setTimeout(function() {
-            clearInterval(timer);
-        }, time);
-    }
-</script>
-
+    
 </html>
